@@ -31,6 +31,8 @@ class Admin::ProductsController < Admin::AdminController
       redirect_to admin_products_path, alert: "product was deleted"
     end
 
+    
+
     private
 
     def set_product
