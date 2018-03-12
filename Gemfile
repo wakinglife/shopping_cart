@@ -34,7 +34,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'kaminari'
 gem 'jquery-rails'
-
+gem 'rails-ujs'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
