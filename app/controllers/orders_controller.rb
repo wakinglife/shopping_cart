@@ -45,6 +45,7 @@ class OrdersController < ApplicationController
        @payment = Payment.create!(
          sn: Time.now.to_i,
          order_id: @order.id,
+         payment_method: params[:payment_method],
          amount: @order.amount
        )
 
@@ -56,7 +57,7 @@ class OrdersController < ApplicationController
       @trade_info = spgateway_data[:TradeInfo]
       @trade_sha = spgateway_data[:TradeSha]
       @version = spgateway_data[:Version]
- 
+
        render layout: false
      end
    end
