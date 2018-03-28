@@ -1,4 +1,4 @@
-h3>Hi, <%= @order.name %> </h3>
+<h3>Hi, <%= @order.name %> </h3>
 
 <p><%= @content %></p>
 
@@ -9,7 +9,6 @@ h3>Hi, <%= @order.name %> </h3>
     <li><%= item.product.name %> <%= item.quantity %> x <%= item.price %></li>
   <% end %>
   <p>Subtotal <%= @order.subtotal %></p>
-  <p>Payment Method: <%= @order.payment_method %></p>
 </ul>
 <hr>
 <h2>Shoping Information</h2>
