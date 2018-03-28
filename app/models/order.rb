@@ -6,6 +6,16 @@ class Order < ApplicationRecord
   has_many :products, through: :order_items
   has_many :payments
 
+  # set constant to generate select options
+    PAYMENT_STATUS = [
+      ["Not Paid", :not_paid],
+      ["Paid", :paid]
+    ]
+
+    SHIPPING_STATUS = [
+      ["Not Shipped", :not_shipped],
+      ["Shipped",:shipped]
+    ]
 
   def add_order_items(cart)
     cart.cart_items.each do |item|
@@ -16,7 +26,7 @@ class Order < ApplicationRecord
       )
     end
   end
-  
+
   def subtotal
     order_items.map{ |x| x.item_total }.sum
   end
